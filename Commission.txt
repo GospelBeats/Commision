@@ -1,0 +1,80 @@
+import java.util.Scanner;
+
+
+public class Commission
+
+{
+
+	public static void main(String[] args) {
+
+	
+
+	System.out.println("Please enter your sales for week");
+
+	
+
+	String employeeName = "Jessica Simpson";
+
+	
+
+	double weekSales;
+
+	
+
+	/* fedTax = federal tax, ss = social security, 
+
+	ret = 401k, */
+
+	
+
+	double fedTax = .18;
+
+	double ss = .06;
+
+	double ret = .10;
+
+	double commissionPay = .07;
+
+	
+
+	Scanner keyboard = new Scanner(System.in);
+
+	
+
+	weekSales = keyboard.nextDouble();
+
+	
+
+	commissionPay *= weekSales; 
+
+	 
+
+	
+
+	ss *= commissionPay;
+
+	fedTax *= commissionPay;
+
+	ret *= commissionPay;
+
+	
+
+	
+
+	commissionPay -= ss;
+
+	commissionPay -= fedTax;
+
+	commissionPay -= ret;
+
+	
+
+		
+
+		System.out.println(employeeName + " your Commission Pay is " + commissionPay);
+
+		
+
+	}
+
+}
